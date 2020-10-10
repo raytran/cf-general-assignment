@@ -1,0 +1,7 @@
+name = "cf-general-assignment"
+type = "webpack"
+account_id = "206c72f551b4c55064bcc5ccd47e8472"
+workers_dev = true
+route = ""
+zone_id = ""
+webpack_config = "webpack.config.js"
