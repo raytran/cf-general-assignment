@@ -1,3 +1,8 @@
+# CF General Assignment
+My (Raymond Tran) take on Cloudflare's 2020 General Engineering Assignment
+
+
+
 # ʕ •́؈•̀) `workers-typescript-template`
 
 A batteries included template for kick starting a TypeScript Cloudflare worker project.
