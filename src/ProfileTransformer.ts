@@ -5,7 +5,7 @@
  * h1 -> sets inner content to name
  * title -> set to name
  */
-export class ProfileTransformer implements ElementHandlerOptionals{
+export class ProfileTransformer implements ElementHandlerOptionals {
     private readonly name: string
     private readonly imgUrl: string
 
@@ -25,7 +25,7 @@ export class ProfileTransformer implements ElementHandlerOptionals{
             element.setAttribute('src', this.imgUrl)
         } else if (element.tagName == 'h1') {
             element.setInnerContent(this.name)
-        } else if (element.tagName == 'title'){
+        } else if (element.tagName == 'title') {
             element.setInnerContent(this.name)
         }
     }

@@ -10,21 +10,24 @@ import InstagramIcon from 'simple-icons/icons/instagram'
 export async function handleRequest(request: Request): Promise<Response> {
     if (request.method == "POST") {
         return handlePOST(request)
-    }else{
+    } else {
         return handleGET(request)
     }
 }
 
 async function handleGET(request: Request): Promise<Response> {
     const url = new URL(request.url)
-    const { pathname, search, hash } = url
+    const {pathname, search, hash} = url
     const links = [
         {"name": "My Github", "url": "https://github.com/raytran"},
         {"name": "My Coolest Project", "url": "https://protochess.com/"},
         {"name": "My Linkedin", "url": "https://www.linkedin.com/in/raymond-tran-b1214319a/"},
-        {"name": "My Resume", "url": "https://drive.google.com/file/d/1X71DEcPdhJVFTW4-8svZAlQeZ70iro1g/view?usp=sharing"}
+        {
+            "name": "My Resume",
+            "url": "https://drive.google.com/file/d/1X71DEcPdhJVFTW4-8svZAlQeZ70iro1g/view?usp=sharing"
+        }
     ]
-    if (pathname == "/links"){
+    if (pathname == "/links") {
         const json = JSON.stringify(links, null, 2)
         return new Response(json, {
             headers: {

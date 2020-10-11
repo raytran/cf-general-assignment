@@ -1,6 +1,10 @@
 # CF General Assignment
 My (Raymond Tran) take on Cloudflare's 2020 General Engineering Assignment
 
+A live version is at:
+```
+https://cf-general-assignment.raytran.workers.dev/
+```
 
 
 # ʕ •́؈•̀) `workers-typescript-template`

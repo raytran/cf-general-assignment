@@ -4,10 +4,14 @@
  */
 interface SocialLinkItem {
     // svg is svg element as a string
-    url: string; svg: string
+    url: string;
+    svg: string
 }
-interface SocialLinks extends Array<SocialLinkItem>{}
-export class SocialTransformer implements ElementHandlerOptionals{
+
+interface SocialLinks extends Array<SocialLinkItem> {
+}
+
+export class SocialTransformer implements ElementHandlerOptionals {
     private readonly links: SocialLinks
 
     constructor(links: SocialLinks) {
@@ -19,10 +23,10 @@ export class SocialTransformer implements ElementHandlerOptionals{
         if (elementStyle) {
             element.setAttribute('style', elementStyle.replace('display: none', ''))
         }
-        for (let link of this.links){
+        for (let link of this.links) {
             element.append("<a href='" + link.url + "'>"
                 + link.svg
-                + "</a>", {'html' : true})
+                + "</a>", {'html': true})
         }
     }
 }
